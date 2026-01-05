@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oukil.APBANQUE_JAVAFX.createAccountController">
+   <children>
+      <AnchorPane prefHeight="593.0" prefWidth="760.0">
+         <children>
+            <Label fx:id="lblTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="280.0" layoutY="14.0" prefHeight="18.0" prefWidth="200.0" text="Ajouter un compte">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnHub" layoutX="14.0" layoutY="519.0" mnemonicParsing="false" onAction="#btnHub" prefHeight="26.0" prefWidth="118.0" text="Accueil" />
+            <Label layoutX="73.0" layoutY="280.0" prefHeight="18.0" prefWidth="118.0" text="Type de compte :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <RadioButton fx:id="radioBtnCompteC" layoutX="195.0" layoutY="280.0" mnemonicParsing="false" onAction="#radioBtnCompteC" text="Compte Courant">
+               <toggleGroup>
+                  <ToggleGroup fx:id="groupeTypeCompte" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioBtnCompteE" layoutX="339.0" layoutY="280.0" mnemonicParsing="false" onAction="#radioBtnCompteE" text="Compte Epargne" toggleGroup="$groupeTypeCompte" />
+            <Label fx:id="lblnCB" alignment="CENTER" layoutX="73.0" layoutY="338.0" prefHeight="18.0" prefWidth="86.0" text="n°CB :" visible="false" />
+            <Label fx:id="lblDecouvert" alignment="CENTER" layoutX="73.0" layoutY="395.0" text="Découvert Max :" visible="false" />
+            <Label fx:id="lblTaux" alignment="CENTER" layoutX="73.0" layoutY="339.0" prefHeight="18.0" prefWidth="86.0" text="Taux :" visible="false" />
+            <TextField fx:id="txtFieldCbTaux" layoutX="206.0" layoutY="336.0" visible="false" />
+            <TextField fx:id="txtFieldDecouvert" layoutX="207.0" layoutY="391.0" visible="false" />
+            <Label layoutX="71.0" layoutY="80.0" text="Sélectionnez un client :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button fx:id="btnAddAccount" layoutX="245.0" layoutY="466.0" mnemonicParsing="false" onAction="#btnAddAccount" text="Confirmer" visible="false" />
+            <TextField fx:id="txtFieldEmailUser" alignment="CENTER" layoutX="274.0" layoutY="75.0" prefHeight="26.0" prefWidth="210.0" promptText="Email du Client" />
+            <Label fx:id="lblVerif" alignment="CENTER" layoutX="182.0" layoutY="523.0" prefHeight="18.0" prefWidth="396.0" text="Label" textFill="RED" visible="false" />
+            <Label fx:id="lblNumCompte" layoutX="71.0" layoutY="125.0" text="Numéro du compte :" />
+            <Label fx:id="lblSolde" layoutX="71.0" layoutY="170.0" text="Solde du compte :" />
+            <Label fx:id="lblDevise" layoutX="71.0" layoutY="220.0" text="Type de devise :" />
+            <TextField fx:id="txtFieldNumCompte" alignment="CENTER" layoutX="274.0" layoutY="120.0" prefHeight="26.0" prefWidth="210.0" />
+            <TextField fx:id="txtFieldSolde" alignment="CENTER" layoutX="274.0" layoutY="165.0" prefHeight="26.0" prefWidth="210.0" />
+            <TextField fx:id="txtFieldDevise" alignment="CENTER" layoutX="274.0" layoutY="215.0" prefHeight="26.0" prefWidth="210.0" />
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
